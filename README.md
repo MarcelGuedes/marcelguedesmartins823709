@@ -1,11 +1,12 @@
-
-```markdown
 # 🚀 Projeto Demo - Spring Boot + Docker
 
-![Java](https://img.shields.io/badge/Java-17-blue?style=for-the-badge)
-![Spring Boot](https://img.shields.io/badge/SpringBoot-3.0-green?style=for-the-badge)
-![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+## 🔧 Tecnologias e informações principais
+[![Java](https://img.shields.io/badge/Java-17-blue?style=for-the-badge)](https://adoptium.net/)
+[![Spring Boot](https://img.shields.io/badge/SpringBoot-3.0-green?style=for-the-badge)](https://spring.io/projects/spring-boot)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+
 
 ---
 
@@ -169,7 +170,6 @@ O projeto foi desenvolvido com commits pequenos e descritivos, para facilitar re
 - Exemplos como carga inicial do banco ✔️  
 - Aplicação empacotada como imagens Docker ✔️  
 - Containers orquestrados (API + MinIO + BD) via docker-compose ✔️  
-```
 
----
+
 
