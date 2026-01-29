@@ -129,6 +129,21 @@ curl http://localhost:8080/api/hello
 ```
 
 ---
+## 🌐 Endpoints da API
+
+### Artists
+- `GET /api/v1/artists` → Lista todos os artistas
+- `GET /api/v1/artists/{id}` → Busca artista por ID
+- `POST /api/v1/artists` → Cria novo artista
+- `PUT /api/v1/artists/{id}` → Atualiza artista existente
+- `DELETE /api/v1/artists/{id}` → Remove artista
+
+### Regionais
+- `GET /api/v1/regionais` → Lista todas as regionais
+- `GET /api/v1/regionais/{id}` → Busca regional por ID
+- `POST /api/v1/regionais` → Cria nova regional
+- `PUT /api/v1/regionais/{id}` → Atualiza regional existente
+- `DELETE /api/v1/regionais/{id}` → Remove regional
 
 ## 📂 Estrutura do projeto
 ```
