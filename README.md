@@ -119,6 +119,40 @@ curl http://localhost:8080/api/hello
 - `DELETE /api/v1/regionais/{id}` → Remove regional  
 
 ---
+## 🔒 Autenticação JWT
+- `POST /api/v1/auth/login` → Gera token JWT válido por tempo limitado.
+- `POST /api/v1/auth/refresh` → Renova token próximo da expiração.
+- Todos os endpoints protegidos exigem o header:
+
+Authorization: Bearer <token>
+
+
+---
+
+## 📂 Upload de Arquivos (MinIO)
+- `POST /api/v1/files/upload` → Gera URL pré-assinada para upload.
+- `GET /api/v1/files/{filename}` → Recupera arquivo via URL pré-assinada.
+- Armazenamento configurado via **MinIO** em container Docker.
+
+---
+
+## 📡 WebSocket
+- Conexão em `ws://localhost:8080/ws/notifications`.
+- Notificações em tempo real quando novos artistas ou regionais são cadastrados.
+
+---
+
+## ❤️ Health Check
+- `GET /actuator/health` → Verifica status da aplicação.
+- `GET /actuator/info` → Exibe informações da build e ambiente.
+
+---
+
+## 📖 Documentação Swagger
+- Acesse a documentação interativa em:
+
+http://localhost:8080/swagger-ui.html
+
 
 ## 📂 Estrutura do projeto
 ```
@@ -155,10 +189,9 @@ O projeto foi desenvolvido com commits pequenos e descritivos, para facilitar re
 
 ### Limitações
 - Não foram implementados testes de integração completos devido ao tempo do desafio.  
-- Priorizamos a implementação dos endpoints principais e a orquestração com Docker.  
-
+- Priorizamos a implementação dos endpoints principais e a orquestração com Docker.
+-  
 ### Possibilidade de evolução
-- Adicionar autenticação JWT para proteger endpoints.  
 - Criar testes de integração com Testcontainers.  
 - Expandir relacionamento N:N para incluir mais atributos (ex: ano de lançamento do álbum).  
 
