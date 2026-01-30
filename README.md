@@ -135,7 +135,25 @@ Authorization: Bearer <token>
 - Armazenamento configurado via **MinIO** em container Docker.
 
 ---
+**Exemplo de uso com Postman**
 
+1. Método: `POST`  
+2. URL: `http://localhost:8080/api/v1/files/upload`  
+3. Body: `form-data`  
+   - Campo: `file` → tipo **File** → selecione um arquivo  
+
+**Resposta esperada:**
+```json
+{
+  "Arquivo disponível em": "http://localhost:9000/albums/foto.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=..."
+}
+```
+
+**Exemplo via cURL**
+```bash
+curl -X POST http://localhost:8080/api/v1/files/upload \
+  -F "file=@foto.jpg"
+```
 ## 📡 WebSocket
 - Conexão em `ws://localhost:8080/ws/notifications`.
 - Notificações em tempo real quando novos artistas ou regionais são cadastrados.
